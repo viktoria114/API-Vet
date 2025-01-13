@@ -17,7 +17,7 @@ router.get('/clientes/:id', async (req, res) => {
     try {
         const cliente = await ModelCliente.findById(req.params.id); 
         if (!cliente) {
-            return res.status(404).send({ mensaje: 'cliente no encontrado' });
+            return res.status(404).send({ mensaje: 'Cliente no encontrado' });
         }
         res.status(200).send(cliente);
     } catch (error) {
@@ -41,7 +41,7 @@ router.put('/clientes/:id', async (req, res) => {
     try {
         const clienteActualizado = await ModelCliente.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
         if (!clienteActualizado) {
-            return res.status(404).send({ mensaje: 'cliente no encontrado' });
+            return res.status(404).send({ mensaje: 'Cliente no encontrado' });
         }
         res.status(200).send(clienteActualizado);
     } catch (error) {
@@ -58,7 +58,7 @@ router.delete('/clientes/:id', async (req, res) => {
         }
         res.status(200).send({ mensaje: 'Cliente eliminado correctamente' });
     } catch (error) {
-        res.status(500).send({ mensaje: 'Error al eliminar el Cliente', error });
+        res.status(500).send({ mensaje: 'Error al eliminar el cliente', error });
     }
 });
 

@@ -4,8 +4,11 @@ const dbconnect = require('./config/db'); // Importar la conexión a la base de 
 const clientesRoutes = require('./routes/clientes')
 const mascotasRoutes = require('./routes/mascotas')
 const port = 3000;
+const cors = require('cors');
 
-app.use(express.json()); // Middleware para interpretar JSON
+app.use(cors());
+app.use(express.json({ limit: '10mb' })); // Aumenta el límite para JSON
+app.use(express.urlencoded({ extended: true, limit: '10mb' })); // Para datos codificados
 
 // Usar las rutas de libros
 app.use(clientesRoutes);

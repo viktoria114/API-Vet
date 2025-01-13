@@ -6,10 +6,10 @@ const ModelMascota = require("../models/mascotamodel");
 router.post("/mascotas", async (req, res) => {
   const body = req.body;
   try {
-    const nuevaMascota = await ModelMascota.create(body); // Insertar en la base de datos
-    res.status(201).send(nuevaMascota); // 201 indica que se ha creado un recurso
+    const nuevaMascota = await ModelMascota.create(body); 
+    res.status(201).send(nuevaMascota); 
   } catch (error) {
-    res.status(400).send(error); // Manejar errores
+    res.status(400).send(error); 
   }
 });
 
