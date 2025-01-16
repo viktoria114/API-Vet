@@ -32,22 +32,17 @@ router.get('/mascotas', async (req, res) => {
   }
 });
 
-// Obtener mascotas de un cliente especifico (GET)
-router.get("/mascota", async (req, res) => {
-  
+// Obtener mascotas de un cliente específico (GET)
+router.get("/mascotas/:id", async (req, res) => {
   try {
-    const cliente = await ModelCliente.findById(req.query.cliente_id); 
+    const clienteId = req.params.id;
+
+    const cliente = await ModelCliente.findById(clienteId);
     if (!cliente) {
-        return res.status(404).send({ mensaje: 'Cliente no encontrado' });
+      return res.status(404).send({ mensaje: 'Cliente no encontrado' });
     }
 
-  const cliente_id = req.query.cliente_id;
-
-  try {
-    const query = {};
-    if (cliente_id) query.cliente_id = cliente_id;
-    
-    const mascotas = await ModelMascota.find(query);
+    const mascotas = await ModelMascota.find({ cliente_id: clienteId });
     if (mascotas.length === 0) {
       return res.status(404).send({ mensaje: "No se encontraron mascotas de este dueño" });
     }
@@ -56,10 +51,8 @@ router.get("/mascota", async (req, res) => {
   } catch (error) {
     res.status(500).send({ mensaje: "Error al buscar mascotas", error });
   }
-} catch (error) {
-  res.status(500).send({ mensaje: 'Error al obtener el cliente', error });
-}
 });
+
 
 // Eliminar una mascota por ID (DELETE)
 router.delete('/mascotas/:id', async (req, res) => {
