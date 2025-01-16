@@ -22,8 +22,18 @@ router.post("/mascotas", async (req, res) => {
 }
 });
 
+// Obtener todas las mascotas (GET)
+router.get('/mascotas', async (req, res) => {
+  try {
+      const mascotas = await ModelMascota.find();
+      res.status(200).send(mascotas);
+  } catch (error) {
+      res.status(500).send({ mensaje: 'Error al obtener las mascotas', error });
+  }
+});
+
 // Obtener mascotas de un cliente especifico (GET)
-router.get("/mascotas", async (req, res) => {
+router.get("/mascota", async (req, res) => {
   
   try {
     const cliente = await ModelCliente.findById(req.query.cliente_id); 
