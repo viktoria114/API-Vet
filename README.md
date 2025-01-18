@@ -52,17 +52,18 @@ Estructura del Proyecto
 
 
 API Endpoints
-- Método      EndPoint        Descripción
-- GET         /clientes       Obtiene todos los clientes
-- POST        /clientes       Crea un nuevo cliente
-- GET         /clientes/:id   Obtiene un cliente específico por id
-- PUT         /clientes/:id   Actualiza un cliente específico por id
-- DELETE      /clientes/:id   Borra un cliente específico por id
-
-- POST        /mascotas       Crea una mascota de un cliente específico
-- GET         /mascotas:id    Obtiene las mascotas de un cliente específico
-- DELETE      /mascotas/:id   Borra una mascota específica por id
-
+| Método | Endpoint | Descripción |
+| --- | --- | --- |
+| GET | `/clientes` | Obtiene todos los clientes |
+| POST | `/clientes` | Crea un nuevo cliente |
+| GET | `/clientes/:id` | Obtiene un cliente específico por id |
+| PUT | `/clientes/:id` | Actualiza un cliente específico por id |
+| DELETE | `/clientes/:id` | Borra un cliente específico por id |
+| --- | --- | --- |
+| GET | `/mascotas` | Obtiene todas las mascotas |
+| POST | `/mascotas/:id` | Crea una mascota de un cliente específico |
+| GET | `/mascotas/:id` | Obtiene las mascotas de un cliente específico |
+| DELETE | `/mascotas/:id` | Borra una mascota específica por id |
 
 Créditos y despliegue
 Por: Arancio Oviedo María Victoria
