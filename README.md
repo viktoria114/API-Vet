@@ -62,7 +62,7 @@ API Endpoints
 | --- | --- | --- |
 | GET | `/mascotas` | Obtiene todas las mascotas |
 | POST | `/mascotas/:id` | Crea una mascota de un cliente específico |
-| GET | `/mascotas:id` | Obtiene las mascotas de un cliente específico |
+| GET | `/mascotas/:id` | Obtiene las mascotas de un cliente específico |
 | DELETE | `/mascotas/:id` | Borra una mascota específica por id |
 
 Créditos y despliegue
