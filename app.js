@@ -16,7 +16,7 @@ app.use(mascotasRoutes);
 
 // Ruta raíz que devuelve un mensaje
 app.get('/', (req, res) => {
-  res.send('¡Bienvenido a mi API de libros!');
+  res.send('¡Bienvenido a mi API de veterinaria! \n Prueba: \n - /mascotas \n - /clientes');
 });
 
 // Iniciar el servidor
