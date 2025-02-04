@@ -58,7 +58,7 @@ API Endpoints
 | POST | `/clientes` | Crea un nuevo cliente |
 | GET | `/clientes/:id` | Obtiene un cliente específico por id |
 | PUT | `/clientes/:id` | Actualiza un cliente específico por id |
-| DELETE | `/clientes/:id` | Borra un cliente específico por id |
+| DELETE | `/clientes/:id` | Borra un cliente específico y todas sus mascotas por id |
 | --- | --- | --- |
 | GET | `/mascotas` | Obtiene todas las mascotas |
 | POST | `/mascotas/:id` | Crea una mascota de un cliente específico |
