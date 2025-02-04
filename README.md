@@ -9,12 +9,12 @@ Es una API destinada a la gestión total de clientes y parcialmente de sus masco
 - Persistencia de datos en MongoDB.
 
 
-Tecnologias utilizadas
+**Tecnologias utilizadas**
 - **Backend**: Node.js, Express.js.
 - **Base de Datos**: MongoDB con Mongoose.
 
 
-Cómo Instalar y Usar
+**Cómo Instalar y Usar**
 1. Clonar el repositorio:
 git clone https://github.com/viktoria114/API-Vet.git
 
@@ -31,7 +31,7 @@ npm run dev
 https://api-vet-six.vercel.app (para usar desde vercel)
 
 
-Estructura del Proyecto
+**Estructura del Proyecto**
 - API-Vet/
 - ├── config/         
 - │   ├── db.js               #configuracion de moongose
@@ -51,7 +51,7 @@ Estructura del Proyecto
 - ├── vercel.json
 
 
-API Endpoints
+**API Endpoints**
 | Método | Endpoint | Descripción |
 | --- | --- | --- |
 | GET | `/clientes` | Obtiene todos los clientes |
@@ -65,6 +65,6 @@ API Endpoints
 | GET | `/mascotas/:id` | Obtiene las mascotas de un cliente específico |
 | DELETE | `/mascotas/:id` | Borra una mascota específica por id |
 
-Créditos y despliegue
+**Créditos y despliegue**
 Por: Arancio Oviedo María Victoria
 GitHub: https://github.com/viktoria114
